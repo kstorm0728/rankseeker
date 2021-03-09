@@ -1,0 +1,106 @@
+@media(max-width: 1170px) {
+	.header-left {
+		display: none;
+	}
+
+	.menu-icon {
+		display: block;
+		color: white;
+		font-size: 25px;
+		line-height: 50px;
+	}
+
+	.tournament {
+		width: 25%;
+	}
+
+	.tournament:not(:nth-child(-n+4)) {
+		display: none;
+	}
+
+	.channel {
+		width: 25%;
+	}
+
+	.channel:not(:nth-child(-n+8)) {
+		display: none;
+	}
+
+	.live {
+		width: 25%;
+	}
+
+	.live:not(:nth-child(-n+4)) {
+		display: none;
+	}
+
+	.player-info .ranking {
+	  font-size: 1.3rem;
+	}
+
+	.player-info .name {
+	  font-size: 1.3rem;
+	}
+
+	.player-info .point {
+	  font-size: 1.1rem;
+	}
+
+	.player-info .avg {
+	  font-size: 0.9rem;
+	}
+
+	.player-info .earning {
+	  font-size: 0.9rem;
+	}
+}
+
+
+
+@media(max-width: 740px) {
+	.tournament {
+		width: 50%;
+	}
+
+	.channel {
+		width: 50%;
+	}
+
+	.live {
+		width: 50%;
+	}
+
+	.men-ranking, .women-ranking {
+		width: 100%;
+	}
+
+	.player-info .ranking {
+	  font-size: 1.4rem;
+	}
+
+	.player-info .name {
+	  font-size: 1.4rem;
+	}
+
+	.player-info .point {
+	  font-size: 1.2rem;
+	}
+
+	.player-info .avg {
+	  font-size: 1rem;
+	}
+
+	.player-info .earning {
+	  font-size: 1rem;
+	}
+
+}
+
+@media(max-width: 480px) {
+	.tournament, .channel, .live {
+		width: 100%;
+	}
+}
+
+
+

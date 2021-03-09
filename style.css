@@ -1,0 +1,572 @@
+/*まとめて表示*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ここからheader*/
+header {
+  height: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-left {
+  padding-left: 50px;
+}
+
+.header-icon {
+  width: 38px;
+  height: 43px;
+  float: left;
+}
+
+.header-left ul {
+  margin: 0;
+}
+
+.header-left li {
+  float: left;
+  padding: 0 10px;
+  list-style: none;
+  font-weight: bold;
+  color: #ff1493;
+  line-height: 45px;
+}
+
+.header-left li a {
+  color: #ff1493;
+  text-decoration: none;
+}
+
+.header-container li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-icon {
+  display: none;
+  padding: 10px;
+}
+
+.menu-icon:hover {
+  color: #ff1493;
+  cursor: pointer;
+}
+
+#header-accordion {
+  width: 45px;
+  height: auto;
+  float: left;
+}
+
+#header-accordion ul {
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  display: none;
+}
+
+#header-accordion li {
+  font-weight: bold;
+  list-style: none;
+  color: #ff1493;
+  text-align: center;
+  line-height: 34px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#header-accordion li a {
+  color: #ff1493;
+  text-decoration: none;
+  display: block;
+}
+
+.header-right {
+  float: right;
+  padding-right: 20px;
+  line-height: 45px;
+}
+
+.signup, .login {
+  color: #ff1493;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #ff1493;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.signup:hover, .login:hover {
+  color: black;
+  background-color: #ff1493;
+  border-radius: 20px;
+  text-decoration: none;  
+}
+
+/* ここまでheader */
+
+/* ここからmodal-wrapper*/
+.login-modal-wrapper, .signup-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 450px;
+  height: auto;
+  text-align: center;
+}
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+
+#signup-form, #login-form {
+  width: 100%;
+}
+
+#signup-form h2, #login-form h2 {
+  color: #5f5d60;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+#signup-form input, #login-form input {
+  width: 320px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 12px 12px;
+  border: 1px solid #d0d5d8;
+  border-radius: 5px;
+}
+
+#submit-btn {
+  display: inline-block;
+  padding: 14px 140px;
+  background-color: #ff1493;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+
+
+main {
+  background-color: #3F3E3E;
+  height: auto;
+  padding: 45px 0 50px 0;
+}
+
+.header-logo {
+  width: 100%;
+}
+
+/* ここからtournament-wrapper */
+.wrapper {
+  height: auto;
+  padding: 0 20px 50px;
+}
+
+.heading h1 {
+  font-size: 40px;
+  font-weight: lighter;
+  color: #ff1493;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.heading h1:hover {
+  color: #E58AE3;
+}
+
+.heading span {
+  float: right;
+  border: 1px solid #ff1493;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin: 35px 10px 0 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ff1493;
+}
+
+.heading span:hover {
+  color: black;
+  background-color: #ff1493;
+}
+
+.tournaments {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tournament {
+  width: 20%;
+  padding: 0 3px;
+  margin-bottom: 6px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.box:hover {
+  outline: 2px solid #ff1493;
+}
+
+.tournament-wrapper img {
+  width: 100%;
+  height: 50%;
+  border-radius: 3px;
+}
+
+.tournament-wrapper .box:hover img {
+  transition: all 0.5s;
+  transform: scale(1.05, 1.05);
+}
+
+.tournament-wrapper .text-contents {
+  padding: 0 10px;
+}
+
+.tournament-wrapper .text-contents h3 {
+  font-size: 18px;
+  color: #ff1493;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.tournament-wrapper .text-contents p {
+  color: black;
+  font-size: 15px;
+}
+
+/* ここまでtournament-wrapper */
+
+/* ここからchannel-wrapper */
+.channel-wrapper img {
+  width: 100%;
+  height: 65%;
+  border-radius: 3px;
+}
+
+.channels {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.channel {
+  width: 20%;
+  padding: 0 3px;
+  margin-bottom: 6px;
+}
+
+.channel-wrapper .box:hover img {
+  transition: all 0.5s;
+  transform: scale(1.05, 1.05);
+}
+
+.channels .text-contents {
+  padding: 0 10px;
+}
+
+.channels .text-contents h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff1493;
+  margin: 0;
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.channels .text-contents p {
+  color: black;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ここまでchannel wrapper */
+
+/* ここからlive wrapper */
+.lives {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.live {
+  width: 20%;
+  padding: 0 3px;
+  margin-bottom: 6px;
+}
+
+.live-wrapper img {
+  width: 100%;
+  height: 65%;
+  border-radius: 3px;
+}
+
+.live-wrapper .box:hover img {
+  transition: all 0.5s;
+  transform: scale(1.05, 1.05);
+}
+
+.lives .text-contents {
+  padding: 0 10px;
+}
+
+.lives .text-contents h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff1493;
+  line-height: 24px;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.lives .text-contents p {
+  font-size: 14px;
+  color: black;
+  margin: 0;
+}
+
+/*ここまでlive-wapper*/
+
+/*ここからranking-wapper*/
+.ranking-header {
+  display: block;
+}
+
+.ranking-header h2 {
+  margin: 0;
+}
+
+.ranking-header h2 strong {
+  font-size: 20px;
+  transform: scaleY(1.1);
+  font-weight: bold;
+  color: #ff1493;
+  padding-right: 10px;
+}
+
+.ranking-header h2 small {
+  color: #a3a3a3;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.ranking-header:hover h2 strong {
+  color: #E58AE3;
+}
+
+.ranking-header p {
+  font-size: 15px;
+  line-height: 34px;
+  color: white;
+}
+
+.point-ranking-boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.men-ranking, .women-ranking {
+  width: 50%;
+  padding: 0 5px;
+}
+
+.ranking-box {
+  min-height: 60px;
+  height: auto;
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+.ranking-box-contents {
+  display: flex;
+}
+
+.player-image {
+  min-width: 60px;
+  max-width: 60px;
+  min-height: 60px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.ranking-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.player-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px 15px;
+  color: black;
+}
+
+.player-info .ranking {
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 3em;
+  padding-right: 12px;
+  white-space: nowrap;
+}
+
+.player-info .name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 6em;
+  padding-right: 12px;
+}
+
+.player-info .rank-up-down span {
+  width: 2.5em;
+  padding: 0.25em 0.5em;
+  margin-right: .5em;
+  color: white;
+  background-color: #29b866;
+  border-radius: 3px;
+}
+
+.player-info .point {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: .5em;
+}
+
+.player-info .avg {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: .5em;
+}
+
+.player-info .goodAvg {
+  color: #94bf37;
+}
+
+.player-info .earning {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: .5em;
+}
+
+.player-info .goodEarning {
+  color: #94bf37;
+}
+
+.ranking-box:hover {
+  outline: 2px solid #ff1493;
+}
+
+.ranking-box:hover .ranking {
+  color: #ff1493;
+}
+
+.ranking-box:hover .name {
+  color: #ff1493;
+}
+
+.ranking-box:hover .point {
+  color: #ff1493;
+}
+
+
+
+/*ここまでranking-wrapper*/
+
+/*ここからsns-wrapper*/
+.sns-wrapper {
+  width: 100%;
+  padding: 30px 0;
+  background-color: black;
+  text-align: center;
+}
+
+.facebook,.twitter {
+  display: inline-block;
+  padding: 0 5px;
+}
+/*ここまでsns-wrapper*/
+
+/*ここからfooter*/
+footer {
+  padding: 30px 0 20px;
+  background-color: #2D2C2C;
+}
+
+footer .about,.privacy {
+  display: inline-block;
+  margin: 0 15px 10px;
+}
+
+footer .footer-container {
+  color: #ff1493;
+  text-align: center;
+}
+
+footer .footer-container a {
+  color: #ff1493;
+}
+
+footer .footer-container a:hover {
+  color: #E58AE3;
+  text-decoration: none;
+}
+
+
+
